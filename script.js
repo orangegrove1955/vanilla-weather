@@ -67,8 +67,8 @@ window.addEventListener("load", () => {
         const celcius = (temperature - 32) * (5 / 9);
         temperatureSection.addEventListener("click", () => {
           if (degreeSpan.textContent === "℉") {
-              degreeSpan.textContent = "℃";
-              temperatureDegree.textContent = celcius.toFixed(0);
+            degreeSpan.textContent = "℃";
+            temperatureDegree.textContent = celcius.toFixed(0);
           } else {
             degreeSpan.textContent = "℉";
             temperatureDegree.textContent = temperature.toFixed(0);
@@ -76,11 +76,12 @@ window.addEventListener("load", () => {
         });
       })
       .then(() => {
+        // Hide loading section
         loadingSection.classList.add("hidden");
+        // Display info
         infoSection.classList.remove("hidden");
         infoSection.classList.add("flex");
       })
-      .then()
       .catch(err => {
         alert(
           "There was a problem getting the current weather, please try reloading the page"
@@ -88,6 +89,10 @@ window.addEventListener("load", () => {
       });
   }
 
+  /** Set an icon for the current weather
+   * @param icon Name of the icon to set
+   * @param iconID Id of the DOM element to set the icon on
+   */
   function setIcons(icon, iconID) {
     const skycons = new Skycons({ color: "white" });
     const currentIcon = icon.replace(/-/g, "_").toUpperCase();
