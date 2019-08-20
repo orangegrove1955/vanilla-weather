@@ -9,3 +9,7 @@ A simple vanilla Javascript application for locating the user, and displaying th
 - CSS3 linear gradients
 - HTML5 canvas
 - Event listeners
+
+# Demo
+
+Check out the [Github Page](https://orangegrove1955.github.io/vanilla-weather/)
